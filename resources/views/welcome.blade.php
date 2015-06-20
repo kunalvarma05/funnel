@@ -9,7 +9,13 @@
             html, body {
                 height: 100%;
             }
-
+            a{
+                background: #333;
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 20px;
+                border-radius: 4px;
+            }
             body {
                 margin: 0;
                 padding: 0;
@@ -46,6 +52,9 @@
             <div class="content">
                 <div class="title">FUNNEL</div>
                 <div class="quote">WORLD, HOLD ON!</div>
+                <p>
+                    <a href="{{route('auth.connect')}}">Connect with Facebook</a>
+                </p>
             </div>
         </div>
     </body>
