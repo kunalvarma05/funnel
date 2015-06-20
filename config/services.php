@@ -35,4 +35,10 @@ return [
         'secret' => '',
     ],
 
+    'facebook' => [
+        'client_id' => '582360481866544',
+        'client_secret' => 'bc3066dfd344c7bd9e76c26166c86d25',
+        'redirect' => 'http://funnel.io/auth/callback',
+    ],
+
 ];
