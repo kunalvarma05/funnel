@@ -2,9 +2,11 @@
 
 namespace Funnel\Http\Controllers\Auth;
 
+use \Auth;
 use Funnel\User;
 use Validator;
 use Funnel\Http\Controllers\Controller;
+use \Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
@@ -33,32 +35,41 @@ class AuthController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Redirect the user to the GitHub authentication page.
      *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
+     * @return Response
      */
-    protected function validator(array $data)
+    public function redirectToProvider()
     {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
-        ]);
+        return Socialite::driver('facebook')->scopes(['public_profile','email'])->redirect();
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Obtain the user information from GitHub.
      *
-     * @param  array  $data
-     * @return User
+     * @return Response
      */
-    protected function create(array $data)
+    public function handleProviderCallback()
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $fbUser = Socialite::driver('facebook')->user();
+
+        $user = User::where('email', $fbUser->getEmail())->first();
+
+        //User not found
+        if(!$user){
+            $user = User::create([
+                'name' => $fbUser->getName(),
+                'email' => $fbUser->getEmail(),
+                'picture' => $fbUser->getAvatar()
+                ]);
+        }
+
+        //If the user was created
+        if($user){
+            //Log in the user
+            if(Auth::loginUsingId($user->id)){
+                return redirect()->intended('backend');
+            }
+        }
     }
 }
