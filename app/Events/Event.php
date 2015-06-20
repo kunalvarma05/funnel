@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Funnel\Events;
 
 abstract class Event
 {

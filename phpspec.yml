@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: Funnel
+        psr4_prefix: Funnel
         src_path: app
