@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "39224423eb17f9a0d72770b2bc64c288",
+    "hash": "3479a74f1393fae33d1fb7f80c253b28",
     "packages": [
+        {
+            "name": "aloha/twilio",
+            "version": "2.0.0-RC2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aloha/laravel-twilio.git",
+                "reference": "8885e13b29fd2b0783d02d24e977fbc202aab279"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aloha/laravel-twilio/zipball/8885e13b29fd2b0783d02d24e977fbc202aab279",
+                "reference": "8885e13b29fd2b0783d02d24e977fbc202aab279",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "twilio/sdk": "~3.12"
+            },
+            "require-dev": {
+                "illuminate/console": "~4||~5",
+                "illuminate/support": "~4||~5",
+                "phpunit/phpunit": "~4.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aloha\\Twilio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hannes Van De Vreken",
+                    "email": "vandevreken.hannes@gmail.com"
+                },
+                {
+                    "name": "Travis J Ryan",
+                    "email": "travisjryan@gmail.com"
+                }
+            ],
+            "description": "Twilio API for Laravel 4",
+            "homepage": "https://github.com/aloha/laravel-twilio",
+            "keywords": [
+                "ivr",
+                "laravel4",
+                "sms",
+                "twilio"
+            ],
+            "time": "2015-04-16 15:35:54"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "1.4.0",
@@ -2138,6 +2191,142 @@
             "time": "2015-06-08 09:37:21"
         },
         {
+            "name": "themattharris/tmhoauth",
+            "version": "0.8.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/themattharris/tmhOAuth.git",
+                "reference": "455552d6c57549632644b6c9ac9204766be2b5ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/themattharris/tmhOAuth/zipball/455552d6c57549632644b6c9ac9204766be2b5ee",
+                "reference": "455552d6c57549632644b6c9ac9204766be2b5ee",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "tmhOAuth": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "themattharris",
+                    "email": "matt@themattharris.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An OAuth library written in PHP by @themattharris",
+            "keywords": [
+                "oauth",
+                "twitter"
+            ],
+            "time": "2014-08-06 22:29:35"
+        },
+        {
+            "name": "thujohn/twitter",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thujohn/twitter.git",
+                "reference": "40a5af806b87a54d607af6bb28e60cc4d6f51803"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thujohn/twitter/zipball/40a5af806b87a54d607af6bb28e60cc4d6f51803",
+                "reference": "40a5af806b87a54d607af6bb28e60cc4d6f51803",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.*|5.*",
+                "php": ">=5.4.0",
+                "themattharris/tmhoauth": "0.8.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Thujohn\\Twitter": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "thujohn",
+                    "email": "jonathan.thuau@gmail.com"
+                }
+            ],
+            "description": "Twitter API for Laravel",
+            "keywords": [
+                "laravel",
+                "laravel4",
+                "laravel5",
+                "twitter"
+            ],
+            "time": "2015-03-23 12:29:01"
+        },
+        {
+            "name": "twilio/sdk",
+            "version": "3.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twilio/twilio-php.git",
+                "reference": "43bee3cc0956447efa1b83ee39b7a59b1b90df06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/43bee3cc0956447efa1b83ee39b7a59b1b90df06",
+                "reference": "43bee3cc0956447efa1b83ee39b7a59b1b90df06",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "mockery/mockery": ">=0.7.2",
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Services_Twilio": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Burke",
+                    "email": "kevin@twilio.com"
+                },
+                {
+                    "name": "Kyle Conroy",
+                    "email": "kyle+pear@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "http://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "time": "2015-03-31 21:34:10"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v1.1.1",
             "source": {
@@ -3459,7 +3648,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "aloha/twilio": 5
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

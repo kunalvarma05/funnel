@@ -7,7 +7,9 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "laravel/socialite": "^2.0"
+        "laravel/socialite": "^2.0",
+        "thujohn/twitter": "~2.0",
+        "aloha/twilio": "2.0.0-RC2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

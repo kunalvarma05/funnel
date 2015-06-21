@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \Funnel\Console\Commands\Inspire::class,
+        \Funnel\Console\Commands\SearchTweets::class,
     ];
 
     /**
@@ -26,5 +27,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('inspire')
                  ->hourly();
+        $schedule->command('searchTweets')
+                 ->everyMinute();
     }
 }

@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix' => "backend"], function () {
+	Route::get('/', array('uses' => "BackendController@index", 'as' => "backend.index"));
+});
+
 Route::group(['prefix' => "auth", 'namespace' => "Auth"], function () {
     Route::get('connect', array('uses' => "AuthController@redirectToProvider", 'as' => "auth.connect"));
     Route::get('callback', array('uses' => "AuthController@handleProviderCallback", 'as' => "auth.callback"));
